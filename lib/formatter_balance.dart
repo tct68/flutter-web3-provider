@@ -1,8 +1,6 @@
 import 'package:decimal/decimal.dart';
 
-/// Extension's [BigInt]
 extension BigIntExt on BigInt {
-  /// Format [BigInt] to string with [decimals] parameter
   String tokenString(int decimals) {
     Decimal value = Decimal.fromBigInt(this);
     Decimal decimalValue =
@@ -11,9 +9,7 @@ extension BigIntExt on BigInt {
   }
 }
 
-/// Format gas price from hex to decimals. Output with 6 digit after comma
 class FormatterBalance {
-  /// Calculate gas price to send transaction
   static String configFeeValue({
     required String? beanValue,
     required String? offsetValue,
